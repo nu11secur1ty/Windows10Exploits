@@ -1,0 +1,10 @@
+*) How to run the exploit
+
+Go into "bin_MsiExploit" directory and from a cmd console launch:
+
+"MsiExploit.exe  \path\file\to\own"
+
+Be sure that both "MsiExploit.exe" and "foo.msi" reside in the same directory.
+
+
+@padovah4ck
