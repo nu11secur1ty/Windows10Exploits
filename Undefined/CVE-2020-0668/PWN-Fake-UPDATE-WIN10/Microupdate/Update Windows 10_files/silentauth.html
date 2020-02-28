@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="SupportPortalSilentAuth" text-direction="" class="ng-scope"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+    <!-- base href="https://support.microsoft.com/" -->
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--“Third party scripts or code, linked to, called or referenced from this web site, online service or product, are licensed to you by the third parties that own such code, not by Microsoft, see ASP.NET Ajax CDN Terms of Use – http://www.asp.net/ajaxlibrary/CDN.ashx.”-->
+    <script src="silentauth_data/adallibraries"></script>
+
+</head>
+<body>
+    <p>Return to <a href="https://support.microsoft.com/">support.microsoft.com</a></p>
+    <script type="text/javascript">
+        document.domain = 'microsoft.com';
+        var app = angular.module("SupportPortalSilentAuth", ['AdalAngular']);
+
+        app.config(['$httpProvider', 'adalAuthenticationServiceProvider', function ($httpProvider, adalProvider) {
+            adalProvider.init(
+            {
+                clientId: "fdf9885b-dd37-42bf-82e5-c3129ef5a302"
+            }, $httpProvider);
+        }]);
+    </script>
+
+
+
+
+
+</body></html>

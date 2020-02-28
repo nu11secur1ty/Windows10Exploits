@@ -1,0 +1,5 @@
+LIBRARY WindowsCoreDeviceInfo 
+
+EXPORTS
+QueryDeviceInformation PRIVATE
+CreateBackdoor PRIVATE
