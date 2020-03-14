@@ -1,0 +1,7 @@
+###############
+# Rules by Claroty
+# This rules will detect SMB compressed communication by the SMB protocol identifier. 
+# The use of the offset and depth parameter is designed to prevent false positives and to allow the NetBios Layer
+###############
+alert tcp any any -> any 445 (msg:"Claroty Signature: SMBv3 Used with compression - Client to server"; content:"|fc 53 4d 42|"; offset: 0; depth: 10; sid:1000001; rev:1; reference:url,//blog.claroty.com/advisory-new-wormable-vulnerability-in-microsoft-smbv3;)
+alert tcp any 445 -> any any (msg:"Claroty Signature: SMBv3 Used with compression - Server to client"; content:"|fc 53 4d 42|"; offset: 0; depth: 10; sid:1000002; rev:1; reference:url,//blog.claroty.com/advisory-new-wormable-vulnerability-in-microsoft-smbv3;)
